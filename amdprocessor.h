@@ -3,12 +3,12 @@
 
 #include "iprocessor.h"
 
-// класс конкретного процессора
+// класс конкретного процессора AMD
 class AMDProcessor: public IProcessor
 {
 public:
-    AMDProcessor(): IProcessor() { }
-    std::string GetProcessorInfo();
+    AMDProcessor(): IProcessor() { }        // конструктор по умолчанию
+    std::string GetProcessorInfo();         // получение информации о процессоре
 };
 
 #endif // AMDPROCESSOR_H

@@ -18,9 +18,9 @@ protected:
     ProcessorType Type;
     double Speed;
 public:
-    IProcessor();
-    virtual void SetProcessor(std::string Version_, ProcessorType Type_, double Speed_);
-    virtual std::string GetProcessorInfo() = 0;
+    IProcessor();   // конструктор по умолчанию
+    virtual void SetProcessor(std::string Version_, ProcessorType Type_, double Speed_); // для задания характеристик процессора
+    virtual std::string GetProcessorInfo() = 0;         // получение информации о процессоре
 };
 
 #endif // IPROCESSOR_H
