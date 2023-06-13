@@ -14,7 +14,6 @@ public:
     {
         return m_processor;
     }
-
 };
 
 #endif // COMPUTER_H

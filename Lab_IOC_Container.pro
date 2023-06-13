@@ -15,10 +15,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += main.cpp \
-    intelprocessor.cpp
+    intelprocessor.cpp \
+    amdprocessor.cpp
 
 HEADERS += \
     computer.h \
     intelprocessor.h \
     iprocessor.h \
-    ioc_container.h
+    ioc_container.h \
+    amdprocessor.h

@@ -1,11 +1,11 @@
-#ifndef INTELPROCESSOR_H
-#define INTELPROCESSOR_H
+#ifndef AMDPROCESSOR_H
+#define AMDPROCESSOR_H
 
 #include "iprocessor.h"
 #include <string>
 
 // класс конкретного процессора
-class IntelProcessor: public IProcessor
+class AMDProcessor
 {
 public:
     IntelProcessor(): IProcessor() { }
@@ -13,6 +13,6 @@ public:
     {
         return "Processor Intel for " + Version + ", " + Speed + "GHz, " + "x" + Type;
     }
- };
+};
 
-#endif // INTELPROCESSOR_H
+#endif // AMDPROCESSOR_H
