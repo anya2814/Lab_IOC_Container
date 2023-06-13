@@ -2,17 +2,13 @@
 #define AMDPROCESSOR_H
 
 #include "iprocessor.h"
-#include <string>
 
 // класс конкретного процессора
-class AMDProcessor
+class AMDProcessor: public IProcessor
 {
 public:
-    IntelProcessor(): IProcessor() { }
-    string GetProcessorInfo()
-    {
-        return "Processor Intel for " + Version + ", " + Speed + "GHz, " + "x" + Type;
-    }
+    AMDProcessor(): IProcessor() { }
+    std::string GetProcessorInfo();
 };
 
 #endif // AMDPROCESSOR_H

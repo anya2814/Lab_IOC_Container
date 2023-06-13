@@ -10,10 +10,7 @@ class Computer
 public:
     Computer(std::shared_ptr<IProcessor> processor):
         m_processor(processor) { }
-    std::shared_ptr<IProcessor> GetProcessor()
-    {
-        return m_processor;
-    }
+    std::shared_ptr<IProcessor> GetProcessor() { return m_processor; }
 };
 
 #endif // COMPUTER_H
