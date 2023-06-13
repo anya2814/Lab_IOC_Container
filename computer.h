@@ -1,13 +1,18 @@
 #ifndef COMPUTER_H
 #define COMPUTER_H
 
+#include <iprocessor.h>
+#include <ioc_container.h>
 
 class Computer
 {
+    std::shared_ptr<IProcessor> m_processor;
 public:
-    IntelProcessor* GetProcessor(double speed, ProcessorType type, string version)
+    Computer(std::shared_ptr<IProcessor> processor):
+        m_processor(processor) { }
+    std::shared_ptr<IProcessor> GetProcessor()
     {
-        return new IntelProcessor(speed, type, version);
+        return m_processor;
     }
 
 };

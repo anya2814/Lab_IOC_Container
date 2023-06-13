@@ -11,7 +11,7 @@ enum ProcessorType
 // абстрактный класс для процессоров
 class IProcessor
 {
-
+    
 }
 
 #endif // IPROCESSOR_H

@@ -20,4 +20,5 @@ SOURCES += main.cpp \
 HEADERS += \
     computer.h \
     intelprocessor.h \
-    iprocessor.h
+    iprocessor.h \
+    ioc_container.h

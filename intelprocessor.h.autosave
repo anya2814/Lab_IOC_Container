@@ -17,8 +17,12 @@ public:
         Type = 64;
         Speed = 0;
     }
-    void SetProcessor(/*string Version_ = "i5-10400", ProcessorType Type_ = 64, double Speed_ = 4.30 /*Ghz*/):
-        Version(Version_), Type(Type_), Speed(Speed_) { };
+    void SetProcessor(string Version_ = "i5-10400", ProcessorType Type_ = 64, double Speed_ = 4.30 /*Ghz*/):
+        Version(Version_), Speed(Speed_) 
+    { 
+        if (Type == 64 || Type == 86)
+            Type = Type_;
+    };
     string GetProcessorInfo()
     {
         return "Processor for " + Version + ", " + Speed + "GHz, " + "x" + Type;
