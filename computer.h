@@ -2,7 +2,7 @@
 #define COMPUTER_H
 
 #include <iprocessor.h>
-#include <ioc_container.h>
+#include <memory>
 
 class Computer
 {
@@ -10,7 +10,7 @@ class Computer
 public:
     Computer(std::shared_ptr<IProcessor> processor):    // конструктор
         m_processor(processor) { }
-    std::string GetProcessor() { return m_processor->GetProcessorInfo(); }  // получаем ссылку на процессор
+    std::string GetProcessor() { return m_processor->GetProcessorInfo(); }  // получаем информацию о процессоре
 };
 
 #endif // COMPUTER_H

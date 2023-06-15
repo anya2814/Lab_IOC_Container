@@ -1,11 +1,6 @@
 #include "iprocessor.h"
 
-IProcessor::IProcessor()
-{
-    Version = std::string();
-    Type = ProcessorType::x64;
-    Speed = 0;
-}
+
 
 void IProcessor::SetProcessor(std::string Version_, ProcessorType Type_, double Speed_)
 {

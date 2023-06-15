@@ -6,9 +6,13 @@
 // класс конкретного процессора AMD
 class AMDProcessor: public IProcessor
 {
+    std::string Version;
+    ProcessorType Type;
+    double Speed;
 public:
-    AMDProcessor(): IProcessor() { }        // конструктор по умолчанию
-    std::string GetProcessorInfo();         // получение информации о процессоре
+    AMDProcessor();        // конструктор по умолчанию
+    void SetProcessor(std::string Version_, ProcessorType Type_, double Speed_) override; // для задания характеристик процессора
+    std::string GetProcessorInfo() override;         // получение информации о процессоре
 };
 
 #endif // AMDPROCESSOR_H
