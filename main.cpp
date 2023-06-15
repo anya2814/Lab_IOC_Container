@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     // создаем объект Computer с уже созданным процессором
     Computer computerIntel(processorIntel);
     // вызываем через процессор функцию для получения информации
-    std::cout << computerIntel.GetProcessor()->GetProcessorInfo() << std::endl;
+    std::cout << computerIntel.GetProcessor() << std::endl;
 
     //------Example #2----------------
     // каждый раз запрашивая IProcessor получаем AMDProcessor
@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
     auto processorAMD = injector.GetObject<IProcessor>();
     processorAMD->SetProcessor("Ryzen 3 4100", ProcessorType::x64, 3.80);
     Computer computerAMD(processorAMD);
-    std::cout << computerAMD.GetProcessor()->GetProcessorInfo() << std::endl;
+    std::cout << computerAMD.GetProcessor() << std::endl;
 
     return a.exec();
 }
